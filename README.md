@@ -17,6 +17,7 @@ In this assignment, you will design the tables to hold data in the CSVs, import 
 
 5. Push these changes to GitHub.
 
+
 ## Instructions
 
 This assignment is divided into three parts: data modeling, data engineering, and data analysis. 
