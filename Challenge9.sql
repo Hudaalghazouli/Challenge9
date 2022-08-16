@@ -58,4 +58,3 @@ create table salaries(
     FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
 );
 select * from salaries;
-
