@@ -32,10 +32,11 @@ select * from departments;
 
 drop table if exists dept_manager;
 create table dept_manager(
-    dept_no INT,
-    emp_no varchar,
+    dept_no varchar,
+    emp_no INT,
     FOREIGN KEY (dept_no) REFERENCES departments(dept_no),
-    FOREIGN KEY (emp_no) REFERENCES employees(emp_no)
+    FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
+    PRIMARY KEY (dept_no, emp_no)
 );
 select * from dept_manager;
 
@@ -44,7 +45,9 @@ create table dept_emp(
     emp_no INT,
     dept_no varchar,
     FOREIGN KEY (emp_no) REFERENCES employees(emp_no),
-    FOREIGN KEY (dept_no) REFERENCES departments(dept_no)
+    FOREIGN KEY (dept_no) REFERENCES departments(dept_no),
+    PRIMARY KEY (emp_no, dept_no)
+    
 );
 select * from dept_emp;
 
